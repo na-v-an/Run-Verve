@@ -1,0 +1,457 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RunVerve</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!-------------------------------- SCRIPT FOR FEATURES -------------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js"></script>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+   
+    <!-------------------------------- NAVBAR  -------------------------------->
+   
+    <nav class="navbar navbar-expand-xl bg-dark navbar-dark">
+        <div class="container-fluid" id="one">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img class="logo mb-2" src="/assets/logo.png" id="logo" alt="logo">
+            <span class="brand-text">RunVerve</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link p-3" aria-current="page" href="#scrolst">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-3" href="#features">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-3" href="#con">Users</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-3" href="#headrun">Verve Coach</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-3" href="#endscrol">Contact us</a>
+              </li>
+            </ul>
+            <form class="nav-item d-flex mt-3 ms-" role="search">
+              <button class="btn login-btn px-5 py-2" id="login-b"type="submit">Login</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+    <!---------------- SCRIPT FOR SCROLLING USING NAVBAR ---------------->
+    <script>
+      $(document).ready(function(){
+        // Smooth scrolling when clicking on navbar links
+        $('.navbar-nav a[href^="#"]').on('click', function(event) {
+          var target = $(this.getAttribute('href'));
+          if( target.length ) {
+            event.preventDefault();
+            $('html, body').stop().animate({
+              scrollTop: target.offset().top - 200 
+            }, 200);
+          }
+        });
+      });
+    </script>
+    <!---------------- TO CLOSE NAVBAR WHEN NAV ITEMS PRESSED ---------------->
+    <script>
+      $(document).ready(function(){
+        // Close navbar menu when a navbar link is clicked
+        $('.navbar-nav .nav-link').on('click', function(event) {
+          // Check if the navbar toggler button is visible (menu is open)
+          if ($('.navbar-toggler').is(':visible')) {
+            // Trigger a click event on the navbar toggler button to close the menu
+            $('.navbar-toggler').trigger('click');
+          }
+        });
+      });
+    </script>
+    <!-------------------------------- LANDING SCREEN - RUNVERVE -------------------------------->
+    <div class="container-fluid" id="cover">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 order-2 order-lg-1">
+                <div class="head">RUN VERVE</div>
+                <div class="beyond">
+                    <p>Beyond pace and miles. RunVerve's<br>
+                       coach whispers wisdom to your<br>
+                       digital twin's soul.</p>
+                </div>
+                <div class="getstart d-flex justify-content-center">
+                  <button class="get">Get Started</button>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 order-1 order-lg-2 d-flex justify-content-center">
+                <img src="assets/gifs/Untitled design.gif" id="img0" alt="rungif">
+            </div>
+        </div>
+    </div>
+
+    <!---------------- INF CAROUSEL  ---------------->
+
+    <div class="owl-carousel owl-theme owl-loaded owl-drag">
+            
+      <div class="owl-stage-outer">
+                
+        <div class="owl-stage">
+          
+          <div class="owl-item">
+            <img src="assets/Advice1.png" alt="Advice1">
+          </div>
+        
+          <div class="owl-item">
+            <img src="assets/Advice2.png" alt="Advice2">
+          </div>
+          <div class="owl-item">
+            <img src="assets/Advice3.png" alt="Advice3">
+          </div>
+          <div class="owl-item">
+            <img src="assets/Advice4.png" alt="Advice4">
+          </div>
+          <div class="owl-item">
+            <img src="assets/Advice5.png" alt="Advice1">
+          </div>
+          <div class="owl-item">
+            <img src="assets/Advice6.png" alt="Advice1">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+      
+  <!---------------- SCRIPTS for autoslider ---------------->
+
+    <script>
+      $(document).ready(function() {
+          function setCarouselItems() {
+              var items
+              if ($(window).width() < 376) {
+                items = 1
+              }
+              if ($(window).width() < 426) {
+                items = 2 
+              }
+              if ($(window).width() <1024) {
+                items = 3
+              }else {
+                items = 4
+              }
+              console.log($(window).width())
+              console.log(items)
+
+              $('.owl-carousel').owlCarousel({
+                  loop: true,
+                  margin: 10,
+                  autoplay: true,
+                  autoplayTimeout: 3000,
+                  autoplayHoverPause: true,
+                  items: items
+              });
+              $(window).resize(function() {
+          if ($(window).width() < 376) {
+              items = 1;
+          } else if ($(window).width() < 769) {
+              items = 2;
+          } else if ($(window).width() < 1200) {
+              items = 3;
+          } else if ($(window).width() < 2560){
+              items = 4;
+          }
+
+          console.log($(window).width());
+          console.log(items);
+
+          // Destroy the existing carousel and reinitialize with the new number of items
+          $('.owl-carousel').trigger('destroy.owl.carousel').owlCarousel({
+              loop: true,
+              margin: 10,
+              autoplay: true,
+              autoplayTimeout: 3000,
+              autoplayHoverPause: true,
+              items: items
+          });
+      });
+          }
+
+          // Call the function when the document is read
+          setCarouselItems();
+
+          // Update the number of items on window resize
+          $(window).resize(function() {
+              setCarouselItems();
+          });
+      });
+    </script>
+
+    <!---------------- ABOUT US  ---------------->
+    <div class="container-fluid" id="cover">
+      <div class="row justify-content-center align-items-center" id="scrolst">
+          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 order-2 order-lg-1">
+              <div class="head">About us</div>
+              <div class="beyond">
+                <p>RunVerve is a data-driven digital twin<br>
+                   based Verve Coach ecosystem that <br>
+                   helps runners achieve their true <br>
+                   potential. </p>
+              </div>
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 pt-5 order-1 order-lg-2 d-flex justify-content-center">
+              <img src="assets/gifs/Video.Guru_20240122_160808959.gif" id="img0" alt="rungif">
+          </div>
+      </div>
+    </div>
+
+    <!---------------- FEATURES ---------------->
+    <div class="container-c" id="features">
+      <span>Features</span>
+    </div>
+    <div class="container-fluid mt-5" id="featurec">  
+      <div uk-slider="center: true">
+    
+        <div class="uk-position-relative uk-visible-toggle uk-dark" tabindex="-1">
+    
+          <ul class="uk-slider-items uk-child-width-1-3@s uk-child-width-1-3@m uk-child-width-1-3@l  uk-grid">
+            <li>
+                <div class="box-container">
+                  <div class="card">
+                    <div class="pic"><img src="assets/gifs/iloveimg-resized/coach.png" alt="picture" style="width: 80%;"/></div>
+                    <div class="content">
+                      <h3 class="title">Run Verve <br> Coach</h3>
+                      <span id="contenti">Real-time feedback <br>
+                            Goal adjustments <br>
+                            Tailored advice </span>
+                    </div>
+                  </div>
+                </div>
+            </li>
+            <li>
+                <div class="box-container">
+                  <div class="card">
+                    <div class="pic"><img src="assets/gifs/iloveimg-resized/insights.png" alt="picture" style="width: 60%;"/></div>
+                    <div class="content">
+                      <h3 class="title">Data-Driven Insights</h3>
+                      <span>Track progress <br>
+                            Analyze performace <br>
+                            Unlock improvement </span>
+                    </div>
+                  </div>
+                </div>
+            </li>
+            <li>
+                <div class="box-container">
+                  <div class="card">
+                    <div class="pic"><img src="assets/gifs/iloveimg-resized/Leaderboard.png" alt="picture" style="width: 90%;"/></div>
+                    <div class="content">
+                      <h3 class="title">Smart leaderboards</h3>
+                      <span>Stay motivated <br>
+                            Compete with peers <br>
+                            Celebrate milestones </span>
+                    </div>
+                  </div>
+                </div>
+            </li>
+            <li>
+                <div class="box-container">
+                  <div class="card">
+                    <div class="pic"><img src="assets/gifs/iloveimg-resized/reward.png" alt="picture" style="width: 80%;"/></div>
+                    <div class="content">
+                      <h3 class="title">Gamified Rewards</h3>
+                      <span>Earn Sparks, redeem <br>
+                            for content, <br>
+                            products, discounts. </span>
+                    </div>
+                  </div>
+                </div>
+            </li>
+            <li>
+                <div class="box-container">
+                  <div class="card" >
+                    <div class="pic"><img src="assets/gifs/iloveimg-resized/personalized.png" alt="picture" style="width: 90%;"/></div>
+                    <div class="content">
+                      <h3 class="title">Personalized<br>Recommendations</h3>
+                      <span id="contenti">Content-gear-nutrition <br>
+                            aligned with your needs </span>
+                    </div>
+                  </div>
+                </div>
+            </li>
+            <li>
+                <div class="box-container">
+                  <div class="card">
+                    <div class="pic"><img src="assets/gifs/iloveimg-resized/Social.png" alt="picture" style="width: 90%;"/></div>
+                    <div class="content">
+                      <h3 class="title">Social Connections</h3>
+                      <span>Share experiences <br>
+                            Find running buddies <br>
+                            Build a community. </span>
+                    </div>
+                  </div>
+                </div>
+            </li>
+            
+          </ul>
+    
+          <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+          <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+    
+        </div>
+    
+        <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+    
+      </div>
+    </div>
+
+    <!---------------- RECEIVE ---------------->
+    <div class="container-fluid" id="cover">
+      <div class="row">
+        <div class="receive text-center">
+          <p>Receive personalized recommendations from <b>Verve Coach</b>, and access <br> 
+            a <b>digital twin</b> that replicates your running profile, helping you make <br>
+            data-driven decisions at your fingertips</p>
+        </div>
+      </div>
+    </div>
+    <!---------------- RECEIVE MESSAGES ---------------->
+    <div class="container-fluid" id="con">
+      <div class="row justify-content-center align-items-center text-center" id="receiv">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex justify-content-center">
+          <img src="assets/gifs/Phone jump.gif" id="img1" alt="rungif">
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 " id="mess">
+
+          <div class="messages">
+            <p class="top">
+              Ask any of your questions <br>and get tailored advice
+            </p>
+            <p class="bubble">Give me a running goal for today</p>
+            <p class="bubble">What is the most effective way to<br>
+                              improve my running form and<br>
+                              prevent injuries?</p>
+            <p class="bubble">Can you help me design a training<br>
+                              that aligns with my fitness<br>
+                              goals and current level of<br>
+                              running experience?</p>
+            <p class="bubble">How can I effectively recover<br>
+                              after long runs or intense <br>
+                              training sessions?</p>
+            <p class="bubble">Are there specific nutrition<br>
+                              guidelines I should follow to<br>
+                              support my running performance?</p>
+            <p class="bubble">I've been struggling with a<br> 
+                              recurring injury. Can you<br>
+                              help me identify the root<br>
+                              cause and suggest strategies<br>
+                              to prevent it?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!---------------- TEXT MESSAGES ANIMATION SCRIPT ---------------->
+    <script>
+      $(document).ready(function() {
+          function animateMessages() {
+              var messages = $('.messages p.bubble');
+              var delay = 3000;
+              var index = 0;
+  
+              function showNextMessage() {
+                  messages.eq(index).addClass('active');
+                  index++;
+  
+                  if (index === messages.length +1) {
+                      // All messages displayed, reset index and delay before starting again
+                      index = 0;
+                      messages.removeClass('active');
+                      setTimeout(showNextMessage, delay);
+                  } else {
+                      // Set the timeout for the next message
+                      setTimeout(showNextMessage, delay);
+                  }
+              }
+                showNextMessage();
+          }  
+          animateMessages();
+      });
+    </script>
+    <!---------------- RUNNERS WITH DATA ---------------->
+    <div class="container-fluid" id="cover">
+      <div class="row justify-content-center align-items-center">
+          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 order-2 order-lg-1">
+              <div class="head" id="headrun">Runners with Data</div>
+                <div class="end1">RunVerve unlocks the true potential of<br>
+                     your running journey by tapping into<br> 
+                     the underutilized data from your<br>
+                     activities.<br><br>
+                     We transform raw data into actionable<br>
+                     insights, providing a personalized<br>
+                     virtual coach and digital twin.<br><br>
+                     Embrace a future where your data<br>
+                     isn't just collected but empowers you<br> 
+                     on every stride.</div>
+              </div>
+          <div class="head-a d-none">Runners with Data</div>
+          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 pt-5 order-1 order-lg-2 d-flex justify-content-center">  
+              <img src="assets/gifs/datagif.gif" id="img1" alt="rungif">
+          </div>
+      </div>
+    </div>
+    <!-------------------------------- CONTACT US -------------------------------->
+    <div class="container-fluid" id="contact">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 order-1 order-md-2">
+                <img class="logos" src="/assets/logo.png" alt="logo">
+                <div class="heads">RUN VERVE</div>
+                <div class="beyonder">
+                    <p>Beyond pace and miles. RunVerve's coach <br>
+                       whispers wisdom to your digital twin's soul.</p>
+                </div>
+                <hr>
+                <sub>@2024 All Rights Reserved</sub>
+                <ul class="atul" style="list-style: none;">
+                  <li class="atlinks"><img class="icons" src="assets/mail.svg" alt="mail">teamrunverve@gmail.com</li>
+                  <li class="atlinks"><img class="icons" src="assets/instagram.svg" alt="instagram">https://www.instagram.com/runverve </li>
+                  <li class="atlinks"><img class="icons" src="assets/linkedin1.svg" alt="linkedin">https://www.linkedin.com/company/runverve</li>
+                </ul>
+            </div>
+            <!-------------------------------- CONTACT FORM -------------------------------->
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 order-1 order-md-2 d-flex justify-content-center">
+              <div class="textboxes" id="endscrol">
+                <form action="#" method="post">
+                  <h2 class="contact-us">Contact us</h2>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Name" required>
+                  </div> 
+                  <div class="form-group">
+                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="Message" required></textarea>
+                  </div>
+                  <div class="send text-center">
+                    <button class="sand" type="submit">Send</button>
+                  </div>
+                </form>
+              </div>
+
+            </div>
+    </div>
+
+</body>
+</html>
