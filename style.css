@@ -438,9 +438,7 @@ sub {
         width: clamp(250px,50vw,400px);
         padding-bottom: 10vw;
     }
-    #headrun {
-        display: none;
-    }
+
     .head-a {
         display: block !important;
         text-align: center;
